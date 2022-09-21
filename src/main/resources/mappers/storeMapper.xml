@@ -2,8 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
- <mapper namespace="com.quiz.lesson02.dao.StoreDAO">
-    <select id="selectStoreList"  resultType="com.quiz.lesson02.model.Store">
+
+<!--순번 13, 맵퍼로 맵핑을 해준다.  -->
+<!--순번 14, 맵퍼 안 내용은 숙지바람.  -->
+<!--순번 15, 맵핑을 다 했다면 serivce로 간다.  -->
+ <mapper namespace="com.quiz.lesson02.dao.StoreDAO">       <!--namespace 는 db랑 연결하는 곳 => 즉 레파지토리 -->
+    <select id="selectStoreList"  resultType="com.quiz.lesson02.model.Store">     <!--reulsttype 는 어디다가 담을것인가?  -->
         SELECT
             *
         FROM
