@@ -4,7 +4,7 @@
 <mapper namespace="com.quiz.lesson03.dao.New_ReviewDAO">
  
  	<!--    DAO 의 메소드 명 매핑              결과 타입은 객체                         -->
- 	<select id="selectNew_ReviewById" parameterType="int" resultType="com.quiz.lesson03.New_Review">
+ 	<select id="selectNew_ReviewById" parameterType="int" resultType="com.quiz.lesson03.model.New_Review">
  		SELECT
  			`id`
 			,`storeId`
