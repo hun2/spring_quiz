@@ -31,4 +31,23 @@ public class RealEstateBO {
 		
 		return realEstateDao.selectRealEstateByAreaPrice(area, price);
 	}
+	
+	
+	public int addRealEstate(RealEstate realEstate) {
+		return realEstateDao.insertRealEstate(realEstate);
+	}
+	
+	
+	public int addRealEstateAsField(int realtorId, String address, int area, String type, int price, Integer rentPrice) {
+		return realEstateDao.insertRealEstateAsField(realtorId, address, area, type, price, rentPrice);
+	}
+	
+	
+	// quiz 업데이트
+	
+	public int updateRealestateById(int id, String type, int price) {
+		
+		return realEstateDao.updateRealestateById(id, type, price);
+	}
+	
 }
