@@ -50,4 +50,14 @@ public class RealEstateBO {
 		return realEstateDao.updateRealestateById(id, type, price);
 	}
 	
+	
+	
+	//quiz 삭제
+	
+	public int deleteRealEstateById(int id) {
+		
+		return realEstateDao.deleteRealEstateById(id);
+		
+	}
+	
 }
