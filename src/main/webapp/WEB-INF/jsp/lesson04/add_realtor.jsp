@@ -15,23 +15,23 @@
 </head>
 <body>
 	<div class="container">
-			<h1>공인중개사 추가/h1>
+			<h1>공인중개사 추가</h1>
 			<form action="/lesson04/quiz02/add_realtor" method="post">
 				<div class="form-group">
 					<label for="office">상호명</label>
-					<input type="text" id="office" name="office" class="form-control col-5" placeholder="상호명을 입력하세요">
+					<input type="text" id="office" name="office" class="form-control col-5" placeholder="예)xx부동산 or xx공인중개사">
 				</div>
 				<div class="form-group">
 					<label for="phoneNumber">전화번호</label>
-					<input type="text" id="phoneNumber" name="phoneNumber" class="form-control col-5" placeholder="프로필 url 입력하세요">
+					<input type="text" id="phoneNumber" name="phoneNumber" class="form-control col-5" placeholder="예)02-999-9999">
 				</div>
 				<div class="form-group">
 					<label for="address">주소</label>
-					<input type="text" id="address" name="address" class="form-control col-5" placeholder="주소를 입력하세요">
+					<input type="text" id="address" name="address" class="form-control col-5" placeholder="예)서울시 서초구">
 				</div>
 				<div class="form-group">
-					<label for="grade">등급</label>
-					<input type="text" id="grade" name="grade" class="form-control col-5" placeholder="등급을 입력하세요">
+					<label for="grade">등급(일반,안심, 프리미엄 중 택 1)</label>
+					<input type="text" id="grade" name="grade" class="form-control col-5" placeholder="예)xx중개사">
 				</div>
 				<button type="submit" class="btn btn-primary">추가</button>
 			</form>
