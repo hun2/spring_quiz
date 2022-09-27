@@ -1,5 +1,6 @@
 package com.quiz.lesson04;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -60,8 +61,10 @@ public class Lesson04Quiz04Controller {
 	public String getSeller( @RequestParam("id") int id, Model model
 			) {
 		Seller result = sellerBo.getSellerId(id);
-		model.addAttribute("seller", result);
-		return "lesson04/get_seller2";
+		List<Seller> result2 = new ArrayList<>();
+		result2.add(result);
+		model.addAttribute("seller", result2);
+		return "lesson04/get_seller";
 	}
 	
 	

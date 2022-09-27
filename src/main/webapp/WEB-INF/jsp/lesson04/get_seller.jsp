@@ -27,6 +27,8 @@
 				<th>갱신일</th>
 			</tr>
 						
+						
+			
 			
 			<c:forEach var="umm" items="${seller}">
 				<tr>
