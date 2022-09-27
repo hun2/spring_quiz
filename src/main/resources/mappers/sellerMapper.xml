@@ -4,10 +4,8 @@
  
  <mapper namespace="com.quiz.lesson04.dao.SellerDAO">
  	<insert id="addSeller" parameterType="map">
- 		
  		INSERT INTO seller
  		(
- 			
 			`nickname`
 			,`profileImageUrl`
 			,`temperature`
@@ -22,8 +20,6 @@
  			, NOW()
  			, NOW()
  		)
- 	
- 	
  	</insert>
  	
  	<select id="selectSeller" resultType="com.quiz.lesson04.model.Seller" parameterType="map">

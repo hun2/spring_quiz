@@ -17,7 +17,7 @@ public class SellerBO {
 	
 	
 	//post
-	public void addSeller(String nickname, String profileImageUrl, String temperature) {
+	public void addSeller(String nickname, String profileImageUrl, double temperature) {
 	
 		sellerDao.addSeller(nickname, profileImageUrl, temperature);
 	}

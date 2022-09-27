@@ -32,12 +32,13 @@ public class Lesson04Quiz04Controller {
 	private SellerBO sellerBo;
 	
 	// insert db 
-	//요청 url : http://localhost/lesson04/quiz01/add_seller
+	//요청 url : http://localhost/lesson04/quiz01/add_seller     
+	// post 방식이라 get이아니라서 url 직접바로 접근 불가능.
 	@PostMapping("/lesson04/quiz01/add_seller")
 	public String addSeller(
 			@RequestParam("nickname") String nickname,
 			@RequestParam(value = "profileImageUrl", required = false) String profileImageUrl,
-			@RequestParam("temperature") String temperature
+			@RequestParam("temperature") double temperature
 			) {
 		
 		sellerBo.addSeller(nickname, profileImageUrl, temperature);
@@ -51,10 +52,16 @@ public class Lesson04Quiz04Controller {
 	//요청 url : http://localhost/lesson04/quiz01/seller_info
 	@GetMapping("/lesson04/quiz01/seller_info")
 	public String getSeller(Model model) {
+		
+		// db select
 		List<Seller> seller = sellerBo.getSeller();
+		
+		//model 에 담기.
 		model.addAttribute("seller", seller);
 		return "lesson04/get_seller";
 	}
+	
+	// select 파라미터값
 	
 	
 	@RequestMapping(value = "/lesson04/quiz01/seller_info" , params="id")

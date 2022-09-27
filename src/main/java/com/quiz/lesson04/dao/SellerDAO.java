@@ -10,10 +10,12 @@ import com.quiz.lesson04.model.Seller;
 @Repository
 public interface SellerDAO {
 
+	
+	//post 
 	public void addSeller(
 			@Param("nickname") String nickname,
 			@Param("profileImageUrl") String profileImageUrl, 
-			@Param("temperature") String temperature);
+			@Param("temperature") double temperature);
 	
 	
 	//전체 db 셀렉
