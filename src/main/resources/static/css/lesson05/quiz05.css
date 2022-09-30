@@ -3,6 +3,7 @@
 .body {
 	height: 1000px;
 	width: 2000px;
+	
 }
 
 
@@ -25,4 +26,8 @@ footer {
 	font-size: 12px;
 	color: gray;
 	align-items: center;
+}
+
+.button{
+	align-content: flex-end;
 }

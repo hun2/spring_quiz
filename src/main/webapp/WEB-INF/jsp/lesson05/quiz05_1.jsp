@@ -51,10 +51,10 @@
 		</header>
 		<section class="section col-10 ">
 			<h1>날씨 입력</h1>
-			<form action="" method="post"> 
+			<form action="/lesson05/quiz05_2" method="post"> 
 				<div class="d-flex form-group container">
 					<label for="date">날짜</label>
-					<input type="text" class="form-control col-2 mr-5" id="date" name="date" placeholder="yyyy-mm-dd">
+					<input type="text" class="form-control col-2 mr-5" id="date" name="date" placeholder="yyyy-mm-dd hh:mm:ss">
 					<label for="weather">날씨</label>
 					<select class="form-control col-2 mr-5" name="weather" id="weather">
 						<option value="맑음">맑음</option>
@@ -70,9 +70,19 @@
 						<option value="좋음">최악</option>
 					</select>
 				</div>
-				<div>
-					
-				
+				<div class="d-flex form-group container">
+					<label for="temperatures">기온</label>
+					<input type="text" class="form-control col-2" id="temperatures" name="temperatures" placeholder="xx">
+					<span class="input-group-text" id="basic-addon2">°C</span>
+					<label for="precipitation">강수량</label>
+					<input type="text" class="form-control col-2" id="precipitation" name="precipitation" placeholder="xx">
+					<span class="input-group-text" id="basic-addon2">mm</span>
+					<label for="windSpeed">풍속</label>
+					<input type="text" class="form-control col-2" id="windSpeed" name="windSpeed" placeholder="xx">
+					<span class="input-group-text" id="basic-addon2">km/h</span>
+				</div>
+				<div class="d-flex">
+				<button type="submit" class="button btn btn-success container col-1">저장</button>
 				</div>
 			</form>
 		</section>

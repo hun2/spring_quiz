@@ -7,7 +7,8 @@
  
  	<select id="selectWeather" resultType="com.quiz.lesson05.model.WeatherHistory">
  		SELECT
- 			`date`
+ 			`id`
+ 			,`date`
 			,`weather`
 			,`temperatures`
 			,`precipitation`
@@ -16,7 +17,36 @@
 			,`createdAt`
 			,`updatedAt`
 		FROM
-			weather_history
+			weatherhistory
  	</select>
+ 
+ 
+ 	<insert id="insertweather" parameterType="map">
+ 		INSERT INTO weatherhistory
+ 		(
+ 			`date`
+			,`weather`
+			,`temperatures`
+			,`precipitation`
+			,`microDust`
+			,`windSpeed`
+			,`createdAt`
+			,`updatedAt`
+ 		)
+ 		VALUES
+ 		(
+ 			NOW()
+ 			,#{weather}
+ 			,#{temperatures}
+ 			,#{precipitation}
+ 			,#{microDust}
+ 			,#{windSpeed}
+ 			, NOW()
+ 			, NOW()
+ 		)
+ 			
+ 	
+ 	</insert>
+ 
  
  </mapper>

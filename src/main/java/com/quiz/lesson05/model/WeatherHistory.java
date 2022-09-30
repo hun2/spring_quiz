@@ -1,16 +1,17 @@
 package com.quiz.lesson05.model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class WeatherHistory {
 	
 	private int id;
-	private Date date;
+	private Timestamp date;
 	private String weather;
-	private String temperatures;
-	private String precipitation;
+	private double temperatures;
+	private double precipitation;
 	private String microDust;
-	private String windSpeed;
+	private double windSpeed;
 	private Date createdAt;
 	private Date updatedAt;
 	public int getId() {
@@ -19,41 +20,18 @@ public class WeatherHistory {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public Date getDate() {
-		return date;
-	}
-	public void setDate(Date date) {
-		this.date = date;
-	}
+	
 	public String getWeather() {
 		return weather;
 	}
 	public void setWeather(String weather) {
 		this.weather = weather;
 	}
-	public String getTemperatures() {
-		return temperatures;
-	}
-	public void setTemperatures(String temperatures) {
-		this.temperatures = temperatures;
-	}
-	public String getPrecipitation() {
-		return precipitation;
-	}
-	public void setPrecipitation(String precipitation) {
-		this.precipitation = precipitation;
-	}
 	public String getMicroDust() {
 		return microDust;
 	}
 	public void setMicroDust(String microDust) {
 		this.microDust = microDust;
-	}
-	public String getWindSpeed() {
-		return windSpeed;
-	}
-	public void setWindSpeed(String windSpeed) {
-		this.windSpeed = windSpeed;
 	}
 	public Date getCreatedAt() {
 		return createdAt;
@@ -66,6 +44,30 @@ public class WeatherHistory {
 	}
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+	public double getTemperatures() {
+		return temperatures;
+	}
+	public void setTemperatures(double temperatures) {
+		this.temperatures = temperatures;
+	}
+	public double getPrecipitation() {
+		return precipitation;
+	}
+	public void setPrecipitation(double precipitation) {
+		this.precipitation = precipitation;
+	}
+	public double getWindSpeed() {
+		return windSpeed;
+	}
+	public void setWindSpeed(double windSpeed) {
+		this.windSpeed = windSpeed;
+	}
+	public void setDate(Timestamp date) {
+		this.date = date;
+	}
+	public Timestamp getDate() {
+		return date;
 	}
 	
 	

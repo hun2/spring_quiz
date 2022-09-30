@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.quiz.lesson05.bo.WeatherHistoryBO;
@@ -202,6 +203,7 @@ public class Lesson05Controller {
 	@Autowired
 	private WeatherHistoryBO weatherHistoryBo;
 	
+	//메인페이지
 	@RequestMapping("/lesson05/quiz05")
 	// select
 	public String getWeatherHistory(Model model) {
@@ -216,7 +218,7 @@ public class Lesson05Controller {
 	
 	
 	
-	
+	//날씨입력
 	@RequestMapping("/lesson05/quiz05_1")
 	public String quiz05_1() {
 		
@@ -226,7 +228,13 @@ public class Lesson05Controller {
 	
 	
 	
-	
+	//db 입력
+	@PostMapping("/lesson05/quiz05_2")
+	public String quiz05_2(WeatherHistory weatherHistory) {
+		
+		weatherHistoryBo.addweather(weatherHistory);
+		return "redirect:/lesson05/quiz05";
+	}
 	
 	
 	
