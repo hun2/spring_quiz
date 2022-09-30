@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,49 +16,29 @@
 </head>
 <body>
 	<div class="container">
-	
-		<h1>맴버십</h1>
+		<h1>1. 후보자 득표율</h1>
 		<table class="table">
 			<thead>
 				<tr>
-					<th>이름</th>
-					<th>전화번호</th>
-					<th>등급</th>
-					<th>포인트</th>
+					<th>기호</th>
+					<th>득표 수 </th>
+					<th>득표율</th>
 				</tr>
 			</thead>
-			<thead>
 			
-				<c:forEach var="membership" items="${membership}" varStatus="status">
-						<tr>
-							<td>${membership.name}</td>
-							<td>${membership.phoneNumber}</td>
-					<c:choose>
-							<c:when test="${membership.grade == 'VIP' }"> 
-								<td class="text-danger"> ${membership.grade }</td>
-							</c:when>
-							<c:when test="${membership.grade == 'GOLD' }"> 
-								<td class="text-warning"> ${membership.grade }</td>
-							</c:when>
-							<c:otherwise>
-								<td>${membership.grade }</td>
-							</c:otherwise>
-					</c:choose>
-					<c:choose>
-						<c:when test="${membership.point >= 5000 }">
-							<td class="text-primary">${membership.point}</td>
-						</c:when>
-						<c:otherwise>
-							<td>${membership.point}</td>
-						</c:otherwise>
-					</c:choose>
-						</tr>
+			<tbody>
+			
+				<c:forEach items="${candidates}" varStatus="status" var="can" >
 					
+					<tr>
+						<td>${status.count}</td>
+						<td><fmt:formatNumber value="${can}" /> </td>
+						<td><fmt:formatNumber value="${can / total}" type="percent" /> </td>
+					</tr>
 				</c:forEach>
-			</thead>	
-		
+			</tbody>		
 		</table>
-	
 	</div>
+	
 </body>
 </html>
