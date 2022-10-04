@@ -6,6 +6,8 @@ import java.util.Date;
 public class WeatherHistory {
 	
 	private int id;
+	// @Datetimeformat patten ("yyyy-mm-dd") 로 어노테이션 설정 후  date는 Date 타입으로 설정해도 잘됨.
+	
 	private Timestamp date;
 	private String weather;
 	private double temperatures;
