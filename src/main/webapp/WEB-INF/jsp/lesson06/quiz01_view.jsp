@@ -27,14 +27,52 @@
 		</tr>
 	</thead>
 	<tbody>
-		<c:forEach items="${url }" var="urls">
+		<c:forEach items="${url}" var="urls">
 			<tr>
 				<td>${urls.id }</td>
 				<td>${urls.name}</td>
 				<td>${urls.url}</td>
+				<td><button class="btn btn-danger" id="delete">삭제</button>
 			</tr>
 		</c:forEach>
 	</tbody>
 </table>
 </body>
+
+<script>
+	
+
+	$("delete").on("click", function(e){
+		
+		
+		
+		$.ajax({
+			
+			type : "GET"
+			, url : "/lesson06/quiz01/delete"
+			, data : {"id" : id}
+		
+		
+			,success : function(data) {
+				if (data =="성공") {
+					location.href ="/lesson06/quiz01_view";
+					
+				}
+			}
+			, error : function(data) {
+				
+				alert ("에러");
+			}
+			
+		})
+		
+		
+	})
+	
+	
+
+
+</script>
+
+
 </html>

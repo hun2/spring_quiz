@@ -1,6 +1,7 @@
 package com.quiz.lesson06.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -18,5 +19,16 @@ public interface UrlDAO {
 	//select
 	
 	public List<Url> selectUrl();
+	
+	
+	
+	//select 
+	
+	public Boolean existUrlByUrl(String url);
+	
+	
+	//delete
+	public void deleteUrlById(int id);
+	
 	
 }

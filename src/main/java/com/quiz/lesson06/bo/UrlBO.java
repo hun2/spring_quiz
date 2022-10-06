@@ -1,6 +1,7 @@
 package com.quiz.lesson06.bo;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,4 +30,24 @@ public class UrlBO {
 		
 		return urlDao.selectUrl();
 	}
+	
+	
+	//select
+	
+	public Boolean existUrlByUrl(String url){
+		
+		return urlDao.existUrlByUrl(url);
+		
+		
+	}
+	
+	
+	//delete 
+	
+	public void deleteUrlById(int id) {
+		urlDao.deleteUrlById(id);
+		
+	}
+	
+	
 }

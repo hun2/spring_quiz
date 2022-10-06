@@ -15,7 +15,10 @@
 	제목
 	<input type="text" class="form-control col-5" placeholder="이름" name="name" id="name">
 	주소
-	<input type="text" class="form-control col-5" placeholder="url" name="url" id="url">
+	<div class="d-flex">
+		<input type="text" class="form-control col-5" placeholder="url" name="url" id="url">
+		<input type="button" class="btn btn-info" value="중복확인" id="check">
+	</div>
 	<button class="btn btn-success col-5 mt-3" id="button">추가</button>
 	 
 	
@@ -23,6 +26,47 @@
 
 
 <script type="text/javascript">
+	
+	
+	$("#check").on("click", function(e){
+	
+		
+		
+		//유효성 검사
+		var url = $("#url").val();
+		if (url == "") {
+			alert("url을 확인하셍");
+		}
+		
+		$.ajax({
+			
+			//request 
+			type : "GET"
+			, url : "/lesson06/quiz01/get_url"
+			, data : {"url" : url}
+		
+			
+			//response
+			
+			,success : function(data) {
+				if (data.isDuplication) {
+					alert("중복");
+				} else  {
+					alert("중복아님");
+				}
+			}
+			
+			, error :  function(e) {
+				
+				
+			}
+		})
+		
+		
+	})
+	
+
+
 
 	$('#button').on('click', function(e){
 		
