@@ -75,12 +75,16 @@ public class Lesson06Controller {
 	//삭제
 	@ResponseBody
 	@GetMapping("/lesson06/quiz01/delete")
-	public String quiz02_delete(@RequestParam("id") int id) {
+	// delete 로 온다면 @DeleteMapping으로 치면 됨.
+	public Map<String, Integer> quiz02_delete(@RequestParam("id") int id) {
 		
-		urlBo.deleteUrlById(id);
+		Map<String, Integer > delete = new HashMap<>();
 		
+		Integer getId = urlBo.deleteUrlById(id);
 		
-		return "성공";
+		delete.put("deleteId", getId);
+		
+		return delete;
 	}
 	
 	

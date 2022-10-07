@@ -49,7 +49,7 @@
  	
  	
  	
- 	<delete id="deleteUrlById" parameterType="int">
+ 	<delete id="deleteUrlById" parameterType="int" >
  		DELETE
  		FROM
  			url

@@ -28,7 +28,7 @@ public interface UrlDAO {
 	
 	
 	//delete
-	public void deleteUrlById(int id);
+	public Integer deleteUrlById(int id);
 	
 	
 }

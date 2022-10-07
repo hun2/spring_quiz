@@ -44,9 +44,9 @@ public class UrlBO {
 	
 	//delete 
 	
-	public void deleteUrlById(int id) {
-		urlDao.deleteUrlById(id);
+	public Integer deleteUrlById(int id) {
 		
+		return urlDao.deleteUrlById(id);
 	}
 	
 	
