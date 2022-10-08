@@ -7,16 +7,16 @@
 			 <nav class="menu"> 
                 <ul class="nav nav-fill"> 
                     <li class="nav-item">
-                        <a href="#" class="nav-link" style="color:white" id="nav_self">펜션소개</a>
+                        <a href="javascript:void(0);" class="nav-link" style="color:white" id="nav_self" onclick="location_click('/lesson6final/lastquiz/show')">펜션소개</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" style="color:white" id="nav_look">객실보기</a>
+                        <a href="javascript:void(0);" class="nav-link" style="color:white" id="nav_look">객실보기</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" style="color:white" id="nav_say">예약안내</a>
+                        <a href="javascript:void(0);" class="nav-link" style="color:white" id="nav_say" onclick="location_click('/lesson06final/lastquiz/reservation')">예약하기</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" style="color:white" id="nav_commutiy">커뮤니티</a>
+                        <a href="javascript:void(0);" class="nav-link" style="color:white" id="nav_commutiy" onclick="location_click('/lesson06final/lastquiz/reservation_check')">예약목록</a>
                     </li>
                 </ul>
             </nav>
